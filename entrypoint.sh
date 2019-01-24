@@ -40,12 +40,17 @@ if [ -z $RPC_PORT ]; then
 fi
 
 if [ -z $RPC_ALLOW_IP ]; then
-  RPC_ALLOW_IP=localhost
+  RPC_ALLOW_IP=127.0.0.1
+fi
+
+if [ -z $RPC_CONNECT_IP ]; then
+  RPC_CONNECT_IP=127.0.0.1
 fi
 
 # Lets configure shit
 sed -i "s/{{RPC_PASSWORD}}/$RPC_PASSWORD/g" /tmp/INSaNe.conf
 sed -i "s/{{RPC_ALLOW_IP}}/$RPC_ALLOW_IP/g" /tmp/INSaNe.conf
+sed -i "s/{{RPC_CONNECT_IP}}/$RPC_CONNECT_IP/g" /tmp/INSaNe.conf
 sed -i "s/{{RPC_PORT}}/$RPC_PORT/g" /tmp/INSaNe.conf
 sed -i "s/{{EXTERNAL_IP}}/$EXTERNAL_IP/g" /tmp/INSaNe.conf
 sed -i "s/{{MASTERNODE_PRIV_KEY}}/$MASTERNODE_PRIV_KEY/g" /tmp/INSaNe.conf
