@@ -31,5 +31,5 @@ docker run \
   -e TX_INDEX=0 \
   -e SEED_NODE=insn.cryptocoderz.com \
   -d \
-  karstenjakobsen/insn-masternode:latest
+  notnormals/insn-masternode:latest
 ```
