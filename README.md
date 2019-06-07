@@ -9,7 +9,7 @@ Docker image for INSANE coin masternode setup
 or
 
 ```
-docker build -t karstenjakobsen/insn-masternode:latest .
+docker build -t notnormals/insn-masternode:latest .
 ```
 
 ## Run
